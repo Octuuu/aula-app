@@ -33,7 +33,7 @@ const Login = () => {
   }
   
   return (
-    <div className="min-h-screen bg-gradient-to-br from-indigo-500 to-purple-600 flex items-center justify-center p-4">
+    <div className="min-h-screen bg-gradient-to-br flex items-center justify-center p-4">
       <Card className="max-w-md w-full p-8">
         <div className="text-center mb-8">
           <img src="/logo.png" alt="Logo" className="h-20 mx-auto mb-4" />
@@ -49,7 +49,7 @@ const Login = () => {
             type="text"
             value={cedula}
             onChange={(e) => setCedula(e.target.value)}
-            placeholder="Ej: 12345678"
+            placeholder="Ingrese su numero de cedula"
             required
             autoFocus
             className="text-center text-lg"
