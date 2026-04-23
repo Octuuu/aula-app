@@ -1,36 +1,44 @@
 import React from 'react'
 import { useNavigate, useLocation } from 'react-router-dom'
+import {
+  HiOutlineHome,
+  HiOutlineUsers,
+  HiOutlineClipboardDocumentList,  // ← CORREGIDO
+  HiOutlineCalendarDays,
+  HiOutlineStar,
+  HiOutlineAcademicCap
+} from 'react-icons/hi2'
 
 const BottomNav = ({ role }) => {
   const navigate = useNavigate()
   const location = useLocation()
   
   const teacherNav = [
-    { path: '/teacher/dashboard', label: 'Inicio', icon: '🏠' },
-    { path: '/teacher/students', label: 'Alumnos', icon: '👥' },
-    { path: '/teacher/tasks', label: 'Tareas', icon: '📝' },
-    { path: '/teacher/attendance', label: 'Asistencia', icon: '📅' },
-    { path: '/teacher/events', label: 'Eventos', icon: '📆' }
+    { path: '/teacher/dashboard',        label: 'Inicio',     icon: HiOutlineHome },
+    { path: '/teacher/students',         label: 'Alumnos',    icon: HiOutlineUsers },
+    { path: '/teacher/tasks',            label: 'Tareas',     icon: HiOutlineClipboardDocumentList },  // ← cambiado
+    { path: '/teacher/attendance',       label: 'Asistencia', icon: HiOutlineCalendarDays },
+    { path: '/teacher/events',           label: 'Eventos',    icon: HiOutlineStar }
   ]
   
   const parentNav = [
-    { path: '/parent/dashboard', label: 'Inicio', icon: '🏠' },
-    { path: '/parent/tasks', label: 'Tareas', icon: '📝' },
-    { path: '/parent/attendance', label: 'Asistencia', icon: '📅' },
-    { path: '/parent/achievements', label: 'Logros', icon: '🏆' },
-    { path: '/parent/events', label: 'Eventos', icon: '📆' }
+    { path: '/parent/dashboard',         label: 'Inicio',     icon: HiOutlineHome },
+    { path: '/parent/tasks',             label: 'Tareas',     icon: HiOutlineClipboardDocumentList },
+    { path: '/parent/attendance',        label: 'Asistencia', icon: HiOutlineCalendarDays },
+    { path: '/parent/achievements',      label: 'Logros',     icon: HiOutlineAcademicCap },
+    { path: '/parent/events',            label: 'Eventos',    icon: HiOutlineStar }
   ]
   
   const studentNav = [
-    { path: '/student/dashboard', label: 'Inicio', icon: '🏠' },
-    { path: '/student/tasks', label: 'Tareas', icon: '📝' },
-    { path: '/student/attendance', label: 'Asistencia', icon: '📅' },
-    { path: '/student/achievements', label: 'Logros', icon: '🏆' },
-    { path: '/student/events', label: 'Eventos', icon: '📆' }
+    { path: '/student/dashboard',        label: 'Inicio',     icon: HiOutlineHome },
+    { path: '/student/tasks',            label: 'Tareas',     icon: HiOutlineClipboardDocumentList },
+    { path: '/student/attendance',       label: 'Asistencia', icon: HiOutlineCalendarDays },
+    { path: '/student/achievements',     label: 'Logros',     icon: HiOutlineAcademicCap },
+    { path: '/student/events',           label: 'Eventos',    icon: HiOutlineStar }
   ]
   
   let navItems = teacherNav
-  if (role === 'parent') navItems = parentNav
+  if (role === 'parent')  navItems = parentNav
   if (role === 'student') navItems = studentNav
   
   return (
@@ -38,6 +46,7 @@ const BottomNav = ({ role }) => {
       <div className="flex justify-around py-1">
         {navItems.map((item) => {
           const isActive = location.pathname === item.path
+          const Icon = item.icon
           return (
             <button
               key={item.path}
@@ -50,7 +59,7 @@ const BottomNav = ({ role }) => {
                 }
               `}
             >
-              <span className="text-xl">{item.icon}</span>
+              <Icon className="text-xl" />
               <span className="text-xs mt-1 font-medium">{item.label}</span>
             </button>
           )

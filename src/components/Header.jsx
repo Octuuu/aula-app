@@ -1,6 +1,7 @@
 import React from 'react'
 import { useAuth } from '../context/AuthContext'
 import { useNavigate } from 'react-router-dom'
+import { HiOutlineArrowRightOnRectangle, HiOutlineAcademicCap } from 'react-icons/hi2'
 
 const Header = ({ title }) => {
   const { user, logout } = useAuth()
@@ -15,16 +16,15 @@ const Header = ({ title }) => {
     <header className="bg-indigo-600 text-white sticky top-0 z-10 shadow-md">
       <div className="flex items-center justify-between px-4 py-3">
         <div className="flex items-center gap-2">
-          <img src="/logo.png" alt="Logo" className="h-8 w-8" />
+          <HiOutlineAcademicCap className="h-8 w-8" />
           <h1 className="text-lg font-semibold">{title}</h1>
         </div>
         <button
           onClick={handleLogout}
-          className="p-2 hover:bg-indigo-700 rounded-lg"
+          className="p-2 hover:bg-indigo-700 rounded-lg transition-colors"
+          aria-label="Cerrar sesión"
         >
-          <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1" />
-          </svg>
+          <HiOutlineArrowRightOnRectangle className="w-5 h-5" />
         </button>
       </div>
       {user && (
