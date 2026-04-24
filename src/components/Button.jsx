@@ -11,7 +11,7 @@ const Button = ({
   className = ''
 }) => {
   const variants = {
-    primary: 'bg-indigo-600 text-white hover:bg-indigo-700',
+    primary: 'bg-blue-700 text-white hover:bg-indigo-700',
     secondary: 'bg-gray-200 text-gray-800 hover:bg-gray-300',
     danger: 'bg-red-600 text-white hover:bg-red-700',
     outline: 'border-2 border-indigo-600 text-indigo-600 hover:bg-indigo-50'

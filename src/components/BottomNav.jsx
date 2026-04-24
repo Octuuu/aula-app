@@ -16,7 +16,7 @@ const BottomNav = ({ role }) => {
   const teacherNav = [
     { path: '/teacher/dashboard',        label: 'Inicio',     icon: HiOutlineHome },
     { path: '/teacher/students',         label: 'Alumnos',    icon: HiOutlineUsers },
-    { path: '/teacher/tasks',            label: 'Tareas',     icon: HiOutlineClipboardDocumentList },  // ← cambiado
+    { path: '/teacher/tasks',            label: 'Tareas',     icon: HiOutlineClipboardDocumentList }, 
     { path: '/teacher/attendance',       label: 'Asistencia', icon: HiOutlineCalendarDays },
     { path: '/teacher/events',           label: 'Eventos',    icon: HiOutlineStar }
   ]

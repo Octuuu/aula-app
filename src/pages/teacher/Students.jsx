@@ -7,6 +7,7 @@ import Modal from '../../components/Modal'
 import Loading from '../../components/Loading'
 import toast from 'react-hot-toast'
 import StudentsList from './StudentsList'
+import { LuSchool } from 'react-icons/lu'
 
 const NIVELES = ['primaria', 'secundaria', 'inicial']
 
@@ -76,10 +77,10 @@ const Students = () => {
       <div className="flex justify-between items-center mb-1">
         <h2 className="text-xl font-bold text-gray-800">Estudiantes</h2>
         <Button onClick={() => setModalOpen(true)} size="small">
-          + Nuevo curso
+          + Crear curso
         </Button>
       </div>
-      <p className="text-sm text-gray-500 mb-4">Seleccioná un curso para ver sus alumnos</p>
+      <p className="text-sm text-gray-500 mb-4">Listado de tus cursos</p>
 
       <div className="space-y-3">
         {grados.map(grado => {
@@ -92,7 +93,7 @@ const Students = () => {
             >
               <div className="flex items-center gap-3">
                 <div className="w-12 h-12 bg-indigo-100 rounded-full flex items-center justify-center flex-shrink-0">
-                  <span className="text-xl">🏫</span>
+                  <LuSchool className="w-6 h-6 text-indigo-600" />
                 </div>
                 <div className="flex-1">
                   <h3 className="font-semibold text-gray-800">{grado.nombre}</h3>

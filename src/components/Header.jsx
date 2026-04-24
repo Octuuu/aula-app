@@ -13,7 +13,7 @@ const Header = ({ title }) => {
   }
   
   return (
-    <header className="bg-indigo-600 text-white sticky top-0 z-10 shadow-md">
+    <header className="bg-blue-700 text-white sticky top-0 z-10 shadow-md">
       <div className="flex items-center justify-between px-4 py-3">
         <div className="flex items-center gap-2">
           <HiOutlineAcademicCap className="h-8 w-8" />

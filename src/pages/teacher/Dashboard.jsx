@@ -53,7 +53,7 @@ const TeacherDashboard = () => {
         <Link to="/teacher/students">
           <Card className="text-center hover:shadow-md transition-shadow">
             <HiOutlineUsers className="text-3xl mb-2 mx-auto text-indigo-600" />
-            <div className="text-2xl font-bold text-indigo-600">{stats.students}</div>
+            
             <div className="text-sm text-gray-500">Estudiantes</div>
           </Card>
         </Link>
@@ -61,7 +61,7 @@ const TeacherDashboard = () => {
         <Link to="/teacher/tasks">
           <Card className="text-center hover:shadow-md transition-shadow">
             <HiOutlineClipboardDocumentList className="text-3xl mb-2 mx-auto text-indigo-600" />
-            <div className="text-2xl font-bold text-indigo-600">{stats.tasks}</div>
+          
             <div className="text-sm text-gray-500">Tareas</div>
           </Card>
         </Link>
@@ -69,7 +69,7 @@ const TeacherDashboard = () => {
         <Link to="/teacher/events">
           <Card className="text-center hover:shadow-md transition-shadow">
             <HiOutlineCalendarDays className="text-3xl mb-2 mx-auto text-indigo-600" />
-            <div className="text-2xl font-bold text-indigo-600">{stats.events}</div>
+            
             <div className="text-sm text-gray-500">Eventos</div>
           </Card>
         </Link>
@@ -77,7 +77,7 @@ const TeacherDashboard = () => {
         <Link to="/teacher/materials">
           <Card className="text-center hover:shadow-md transition-shadow">
             <HiOutlineBookOpen className="text-3xl mb-2 mx-auto text-indigo-600" />
-            <div className="text-2xl font-bold text-indigo-600">{stats.materials}</div>
+          
             <div className="text-sm text-gray-500">Materiales</div>
           </Card>
         </Link>
