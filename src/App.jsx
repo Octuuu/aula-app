@@ -108,7 +108,7 @@ function ProtectedRoute({ role }) {
 // Layout para profesor
 function TeacherLayout() {
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen ">
       <Header title="Panel Profesor" />
       <main className="pb-20">
         <Outlet />
@@ -134,7 +134,7 @@ function ParentLayout() {
   }
   
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen">
       <Header title={getTitle()} />
       <main className="pb-20">
         <Outlet />

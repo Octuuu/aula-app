@@ -2,6 +2,19 @@
 
 @layer base {
   body {
-    @apply bg-gray-50;
+    /* Color de fondo blanco o un gris muy sutil */
+    background-color: #ffffff; 
+    
+    /* Puntos oscuros: usando negro con baja opacidad (0.1 = 10%) */
+    background-image: radial-gradient(rgba(0, 0, 0, 0.1) 1px, transparent 1px);
+    
+    /* Espaciado de los puntos */
+    background-size: 13px 13px;
+    
+    /* Mantiene el fondo fijo al hacer scroll */
+    background-attachment: fixed;
+    
+    /* Texto oscuro para que sea legible sobre el blanco */
+    color: #1f2937; 
   }
 }
